@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="MyShop.Views.VagasView"
+	xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+    xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+	 xmlns:cbox="clr-namespace:Messier16.Forms.Controls;assembly=Messier16.Forms.Controls"
+    xmlns:design="clr-namespace:MyShop;assembly=MyShop"
+	xmlns:local="clr-namespace: MyShop;assembly=MyShop"
+	
+     
+	IsBusy="{Binding IsBusy}">
+	
+	<ContentPage.Content>
+
+		<StackLayout Padding="10" Spacing="10">
+
+
+			<StackLayout  VerticalOptions="Start" Orientation="Horizontal">
+				<cbox:Checkbox x:Name="chkPeriodo" WidthRequest="45" VerticalOptions="Center"  />
+				<Label Text="Vaga período" VerticalOptions="Center" />
+
+			</StackLayout>
+			<StackLayout x:Name="grupvalorhora"   VerticalOptions="Start" Orientation="Horizontal" IsVisible="false">
+				<Label  Text="Valor Hora" VerticalOptions="Center"  />
+				<Entry x:Name="ValorHora" WidthRequest="220"  VerticalOptions="Center" Text="{Binding vaga.ValorHora, Mode=TwoWay, StringFormat='{0:C}'}"  />
+			</StackLayout>
+			<StackLayout x:Name="grphorainicial"  VerticalOptions="Start" Orientation="Horizontal" IsVisible="false">
+				<Label Text="Hora Inicial:"  VerticalOptions="Center" x:Name="hrinicial"  />
+				<Entry x:Name="HoraInicial" WidthRequest="220" Text="{Binding teste, Mode=TwoWay, StringFormat='{0:C}'}"/>
+			</StackLayout>
+			<StackLayout x:Name="grphorafinal"  VerticalOptions="Start" Orientation="Horizontal" IsVisible="false">
+				<Label Text="Hora Final:" VerticalOptions="Center" x:Name="hrfinal" />
+				<Entry x:Name="HoraFinal" WidthRequest="220" />
+			</StackLayout>
+			<StackLayout  VerticalOptions="Start" Orientation="Horizontal"  >
+				<cbox:Checkbox x:Name="chkDiario" WidthRequest="45" VerticalOptions="Center"/>
+				<Label Text="Vaga diária" VerticalOptions="Center" />
+
+			</StackLayout>
+			<StackLayout x:Name="grpValorDiario"  VerticalOptions="Start" Orientation="Horizontal" IsVisible="false">
+				<Label Text="Valor Diaria:" VerticalOptions="Center" x:Name="hrValorDiaria" />
+				<Entry x:Name="ValorDiaria" WidthRequest="220"  />
+
+			</StackLayout>
+
+			<StackLayout   VerticalOptions="Start" Orientation="Horizontal"  >
+				<cbox:Checkbox x:Name="chkMensal"  WidthRequest="45" VerticalOptions="Center"/>
+				<Label Text="Vaga mensal" VerticalOptions="Center" />
+			</StackLayout>
+			<StackLayout x:Name="grpMensal" VerticalOptions="Start" Orientation="Horizontal"  IsVisible="false">
+				<Label Text="Valor " VerticalOptions="Center" />
+				<Entry x:Name="ValorMensal" WidthRequest="220" Placeholder="Valor Mensal"  />
+			</StackLayout>
+
+			
+				<Label Text="Endereço " VerticalOptions="Center" />
+				<Entry x:Name="Endereço" WidthRequest="320" HorizontalOptions="CenterAndExpand" />
+
+			<StackLayout  VerticalOptions="Start" Orientation="Horizontal">
+				<cbox:Checkbox x:Name="chkVaga" WidthRequest="45" VerticalOptions="Center"   />
+				<Label Text="Vaga" VerticalOptions="Center" />
+
+			</StackLayout>
+			<StackLayout  VerticalOptions="Start" Orientation="Horizontal">
+				<cbox:Checkbox x:Name="chkArea" WidthRequest="45" VerticalOptions="Center"  />
+				<Label Text="Area Estacionamento" VerticalOptions="Center" />
+
+			</StackLayout>
+
+
+
+
+			<Button x:Name="btnSalvar" Text="Disponibilizar Vaga" />
+			<Button x:Name="btnCancelar" Text="Cancelar" />
+
+		</StackLayout>
+
+
+
+	</ContentPage.Content>
+
+</ContentPage>

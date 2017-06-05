@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyShop.Views.VagasDetalhe"
+			 Title="Locar vaga">
+	<ScrollView>
+		<StackLayout Margin="20" >
+			<Image Source="{Binding Foto}" HeightRequest="200" WidthRequest="200"  />
+			<StackLayout IsVisible="false" x:Name="grupomensal" HorizontalOptions="Center"  >
+				<Label Text="{Binding DescricaoDisponiveMensal}" x:Name="lblMensal" HorizontalOptions="Center" Style="{DynamicResource TitleStyle}" />
+				<Label Text="Valor Mensal" FontAttributes="Italic"   HorizontalOptions="Center" />
+				<Label Text="{Binding ValorMensal}" FontAttributes="Italic"  x:Name="lblVlrMensal" HorizontalOptions="Center" />
+				<Button Text="Alugar Mensal" x:Name="btnMensal"  />
+			</StackLayout>
+			<StackLayout IsVisible="false" x:Name="grupodiario"  >
+				<Label Text="{Binding DescricaoDisponivelDiario}" x:Name="lblDiario" HorizontalOptions="Center" Style="{DynamicResource TitleStyle}" />
+				<Label Text="Valor Diario" FontAttributes="Italic"   HorizontalOptions="Center" />
+				<Label Text="{Binding ValorDiaria}" FontAttributes="Italic"  x:Name="lblVlrDiario" HorizontalOptions="Center" />
+				<Button Text="Alugar Diario" x:Name="btnDiario"  />
+			</StackLayout>
+			<StackLayout IsVisible="false" x:Name="grupohora" >
+				<Label Text="{Binding DescricaoDisponivelPeriodo}" x:Name="lblHora" HorizontalOptions="Center" Style="{DynamicResource TitleStyle}" />
+				<Label Text="Valor Hora" FontAttributes="Italic"   HorizontalOptions="Center" />
+				<Label Text="{Binding ValorHora}" FontAttributes="Italic"  x:Name="lblVlrhora" HorizontalOptions="Center" />
+				<Label Text="Disponivel" FontAttributes="Italic"   HorizontalOptions="Center" />
+				<Label Text="{Binding HoraInicialDisponivel}" FontAttributes="Italic"  x:Name="lblVlrHoraInicial" HorizontalOptions="Center" />
+				<Label Text="{Binding HoraFinalDisponivel}" FontAttributes="Italic"  x:Name="lblVlrHoraFinal" HorizontalOptions="Center" />
+				<Button Text="Alugar por  hora" x:Name="btnHora" />
+			</StackLayout>
+
+
+			<Label Text="{Binding Details}" Style="{DynamicResource BodyStyle}" />
+		</StackLayout>
+	</ScrollView>
+</ContentPage>

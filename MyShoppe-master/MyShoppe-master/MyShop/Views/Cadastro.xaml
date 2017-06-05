@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyShop.Views.Cadastro">
+
+	<ContentPage.Content>
+
+		<StackLayout Padding="10" Spacing="10">
+
+
+			
+				<Label  Text="Nome:" VerticalOptions="Center"  />
+			<Entry x:Name="nome" WidthRequest="220"  VerticalOptions="Center"  Placeholder="Nome"  />
+			
+			
+				<Label Text="Endereço:"  VerticalOptions="Center" x:Name="hrinicial"  />
+			<Entry x:Name="endereco" WidthRequest="220"  Placeholder="Endereco" />
+			<Label Text="Telefone:"  VerticalOptions="Center" x:Name="hrinicialte"  />
+			<Entry x:Name="telefone" WidthRequest="220"  Placeholder="Tel" />
+
+			<Label Text="CPF:"  VerticalOptions="Center" x:Name="hrinicial1"  />
+			<Entry x:Name="cpf" WidthRequest="220"  Placeholder="CPF" />
+
+			<Label Text="Cartao de Credido:"  VerticalOptions="Center" x:Name="cartaocreditonum"  />
+			<Entry x:Name="CartaoCredito" WidthRequest="220"  Placeholder="Cartao" />
+
+			<Label Text="Usuario FaceBook:"  VerticalOptions="Center" x:Name="usuface"  />
+			<Entry x:Name="usuarioFacebook" WidthRequest="220"  Placeholder="Usuario Facebook" />
+
+			<Label Text="Senha Facebook" WidthRequest="220"    />
+			<Entry x:Name="senhafacebook" WidthRequest="220"  IsPassword="True" />
+
+
+
+
+
+
+			<Button x:Name="btnSalvar" Text="Cadastrar" />
+			<Button x:Name="btnCancelar" Text="Cancelar" />
+
+		</StackLayout>
+
+
+
+	</ContentPage.Content>
+
+
+
+</ContentPage>
